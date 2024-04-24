@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main
       className="flex min-h-screen flex-col items-center justify-between bg-cover bg-center bg-black"
-      style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.88)), url('/bg.jpg')"}}
+      style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.92)), url('/bg.jpg')"}}
     >
       <div className="spacer"></div>
       <div className="prose flex-col items-center text-center justify-center">
