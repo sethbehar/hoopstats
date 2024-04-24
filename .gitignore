@@ -12,6 +12,10 @@
 # next.js
 /.next/
 /out/
+stats.csv
+stats
+partialstats.csv
+partialstats
 
 # production
 /build
