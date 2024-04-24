@@ -1,13 +1,30 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-      <p className="text-xl text-center">
-        HoopStats is a basketball statistics app that allows you to track your
-        stats and improve your game.
-      </p>
-      <div className="flex space-x-4 scale-75">
+    <main
+      className="flex min-h-screen flex-col items-center justify-between bg-cover bg-center bg-black"
+      style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.88)), url('/bg.jpg')"}}
+    >
+      <div className="spacer"></div>
+      <div className="prose flex-col items-center text-center justify-center">
+        <div className="badge badge-neutral">
+          Try To Beat Today's Highscore 🏀
+        </div>
+        <h1 className="mt-8">Welcome to HoopStats!</h1>
+        <h2>Who has had the better season?</h2>
+        <p>
+          HoopStats is an online game where you choose higher or lower on NBA
+          players' season stats. Think you know basketball? Put your knowledge
+          to the test and challenge your friends to see who reigns supreme in
+          NBA trivia!
+        </p>
+        <div className="flex justify-center">
+          <button className="btn mx-2">Easy Mode</button>
+          <button className="btn mx-2">Hard Mode</button>
+        </div>
+      </div>
+      <div className="flex space-x-4 scale-75 mb-8">
         <div className="stats stats-vertical lg:stats-horizontal shadow">
           <div className="stat">
             <div className="stat-title">Plays</div>
