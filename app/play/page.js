@@ -37,21 +37,23 @@ const Page = () => {
   };
 
   return (
-    <div className='min-h-screen '>
-      <h1>Round: {round}</h1>
+    <div className='flex flex-col min-h-screen bg-gray-700 justify-center content-center items-top text-center'>
+      <h1 className='text-center text-2xl font-bold'>Current Score: <span className='text-orange-500'>{round}</span></h1>
       <div className='flex flex-row justify-around items-center'>
         {players && players.map((player, index) => (
           <div key={player.Player} className='w-1/2 text-center'>
-            <h2>{player.Player} ({player.Tm})</h2>
-            <p>Points per game: {player.PTS}</p>
+            <h2 className='text-xl font-semibold'>{player.Player} ({player.Tm})</h2>
+            {/* <p>Points per game: {player.PTS}</p>
             <p>Assists per game: {player.AST}</p>
-            <p>Rebounds per game: {player.TRB}</p>
-            <button className="mt-4 py-2 px-4 bg-blue-500 text-white font-bold rounded hover:bg-blue-700"
+            <p>Rebounds per game: {player.TRB}</p> */}
+            <button className="mt-4 py-2 px-4 bg-orange-500 text-white font-bold rounded hover:bg-orange-700 transition duration-200 ease-in-out"
               onClick={() => handleGuess(index === 0 ? 'player1' : 'player2')}>
-              Guess Higher
+              {player.Player} has more PPG
             </button>
           </div>
         ))}
+        <div className='absolute bottom-0 left-50 min-h-2/5 h-2/5 bg-gray-600 w-1 min-w-1'></div>
+        <div className='absolute top-0 left-50 min-h-2/5 h-2/5 bg-gray-600 w-1 min-w-1'></div>
       </div>
     </div>
   );
